@@ -15,13 +15,17 @@ namespace dualnBack
         {
             var result = db.context.checkUserAndPass(user, pass);
             if (result == 2)
+            {
+                GameFrm.setUserName(user);
                 GameFrm.New.ShowDialog();
+            }
+
             else if (result == 1)
                 AdminFrm.New.ShowDialog();
             else
             {
                 LoginFrm.newLogin.Show();
-                msgForm.newMsg.setMessage("no encongrado");
+                msgForm.newMsg.setMessage("no encontrado");
                 msgForm.newMsg.ShowDialog();
             }
 
@@ -44,6 +48,13 @@ namespace dualnBack
             m.ShowDialog();
 
             return;
+        }
+
+        public void logOut()
+        {
+            LoginFrm.newLogin.clear();
+            LoginFrm.newLogin.ShowDialog();
+            GameFrm.New.Hide();
         }
     }
 }

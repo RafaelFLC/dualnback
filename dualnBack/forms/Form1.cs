@@ -21,6 +21,14 @@ namespace dualnBack
             _loginC = new LoginController();
         }
 
+        public void clear()
+        {
+            foreach (var tbox in Controls.OfType<TextBox>())
+            {
+                tbox.Text = "";
+            }
+        }
+
         public static LoginFrm newLogin
         {
             get
@@ -69,7 +77,7 @@ namespace dualnBack
             {
                 this.Hide();
                 _loginC.ingresar(user, pass);
-               
+               this.Close();
             }
         }
     }

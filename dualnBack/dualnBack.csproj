@@ -71,6 +71,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controllers\AdminController.cs" />
+    <Compile Include="controllers\gameController.cs" />
     <Compile Include="forms\AdminFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +99,8 @@
     <Compile Include="forms\msgForm.Designer.cs">
       <DependentUpon>msgForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="models\ScoreModel.cs" />
+    <Compile Include="models\userModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="forms\registerFrm.cs">
